@@ -1,0 +1,101 @@
+## STDOUT ##
+
+[[92mINFO[0m] SC2 4.9.0 용 패치 적용
+패치 sc2.ids.ability_id
+패치 sc2.game_state
+패치 sc2.bot_ai
+패치 sc2.client
+패치 sc2.controller
+패치 sc2.main
+INFO:root:Failed to import cuda module: No module named 'caffe2.python.caffe2_pybind11_state_gpu'
+INFO:root:Failed to import AMD hip module: No module named 'caffe2.python.caffe2_pybind11_state_hip'
+WARNING:root:This caffe2 python run does not have GPU support. Will run in CPU only mode.
+INFO:sc2.protocol:Client status changed to Status.launched (was None)
+INFO:sc2.protocol:Client status changed to Status.launched (was None)
+INFO:sc2_patch.sc2_patch_490.controller:Creating new game
+INFO:sc2_patch.sc2_patch_490.controller:Map:     NCFellowship-2019_m1_v7
+INFO:sc2_patch.sc2_patch_490.controller:Players: Bot(Race.Terran, <bots.KINAI.bot.Bot object at 0x7fbdcfce1828>), Bot(Race.Terran, <bots.Maru.bot.Bot object at 0x7fbdbe67d400>)
+INFO:sc2.protocol:Client status changed to Status.init_game (was Status.launched)
+INFO:sc2.protocol:Client status changed to Status.launched (was None)
+INFO:root:Player 0 - Bot(Race.Terran, <bots.Maru.bot.Bot object at 0x7fbdbe67d400>)
+TEST: 0, <bots.Maru.bot.Bot object at 0x7fbdbe67d400>
+INFO:sc2.sc2process:kill_switch: Process cleanup
+INFO:sc2.sc2process:Cleaning up...
+INFO:sc2.sc2process:Cleanup complete
+INFO:sc2.sc2process:Cleaning up...
+INFO:sc2.sc2process:Cleanup complete
+
+
+## STDERR ##
+
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+Command Line: '"/home/hspark8312/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 18533 -displayMode 0 -dataDir /home/hspark8312/StarCraftII -tempDir /tmp/SC2_t5w8scdx'
+Starting up...
+Startup Phase 1 complete
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+Command Line: '"/home/hspark8312/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 18499 -displayMode 0 -dataDir /home/hspark8312/StarCraftII -tempDir /tmp/SC2_wckzvq0j'
+Starting up...
+Startup Phase 1 complete
+Startup Phase 2 complete
+Creating stub renderer...
+Listening on: 127.0.0.1:18533
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 2 complete
+Creating stub renderer...
+ConnectHandler: Request from 127.0.0.1:59159 accepted
+ReadyHandler: 127.0.0.1:59159 ready
+Requesting to join a multiplayer game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface enabled
+Configure: score interface enabled
+Configure: render interface disabled
+Listening on: 127.0.0.1:18499
+Startup Phase 3 complete. Ready for commands.
+ConnectHandler: Request from 127.0.0.1:59160 accepted
+ReadyHandler: 127.0.0.1:59160 ready
+Requesting to join a multiplayer game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface enabled
+Configure: score interface enabled
+Configure: render interface disabled
+Create game with map path: NCFellowship-2019_m1_v7.SC2Map
+Attempting to join a game with the map: NCFellowship-2019_m1_v7.SC2Map
+Client unable to join a hosted game.
+Error: expected response: data, actual response: none
+Error reported: A game has not been started yet
+/home/hspark8312/anaconda3/envs/sc2/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+/home/hspark8312/anaconda3/envs/sc2/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+  return f(*args, **kwds)
+/home/hspark8312/anaconda3/envs/sc2/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/hspark8312/anaconda3/envs/sc2/lib/python3.6/site-packages/past/builtins/misc.py:45: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  from imp import reload
+Traceback (most recent call last):
+  File "/home/hspark8312/anaconda3/envs/sc2/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/hspark8312/anaconda3/envs/sc2/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/d/sc2minigame-eval-2020-01-09/tournament/run.py", line 213, in <module>
+    play_game(args.bot1, args.bot2, args.map_name, args.realtime, args.replay_path)
+  File "/mnt/d/sc2minigame-eval-2020-01-09/tournament/run.py", line 130, in play_game
+    result = sc2.run_game(game_map, bots, realtime=realtime, save_replay_as=replay_path)
+  File "/mnt/d/sc2minigame-eval-2020-01-09/sc2_patch/sc2_patch_490/main.py", line 60, in run_game
+    _join_game(players, **join_kwargs, portconfig=portconfig),
+  File "/home/hspark8312/anaconda3/envs/sc2/lib/python3.6/asyncio/base_events.py", line 488, in run_until_complete
+    return future.result()
+  File "/mnt/d/sc2minigame-eval-2020-01-09/sc2_patch/sc2_patch_490/main.py", line 39, in _join_game
+    result = await _play_game(players[1], client, realtime, portconfig, step_time_limit, game_time_limit, rgb_render_config=rgb_render_config)
+  File "/mnt/d/sc2minigame-eval-2020-01-09/sc2_patch/sc2_patch_490/main.py", line 80, in _play_game
+    result = await _play_game_ai(client, player_id, player.ai, realtime, step_time_limit, game_time_limit, log_queue)
+  File "/mnt/d/sc2minigame-eval-2020-01-09/sc2_patch/sc2_patch_490/main.py", line 125, in _play_game_ai
+    game_data = await client.get_game_data()
+  File "/home/hspark8312/anaconda3/envs/sc2/lib/python3.6/site-packages/sc2/client.py", line 137, in get_game_data
+    data=sc_pb.RequestData(ability_id=True, unit_type_id=True, upgrade_id=True, buff_id=True, effect_id=True)
+  File "/home/hspark8312/anaconda3/envs/sc2/lib/python3.6/site-packages/sc2/protocol.py", line 74, in _execute
+    raise ProtocolError(f"{response.error}")
+sc2.protocol.ProtocolError: ['A game has not been started yet']
