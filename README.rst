@@ -22,7 +22,8 @@ summary.xlsx
    :file: summary.csv
    :header-rows: 1
 
-- https://github.com/rex8312/-ncf-2019-final/blob/master/summary.csv
+
+- 최종결과: https://github.com/rex8312/ncf-2019-final/blob/master/summary.csv
 - 평가 결과 요약, 평균 승률로 정렬
    - bot: 평가 시스템에서 사용한 bot이름
       - abs_taebe: abs("tae-bo")
