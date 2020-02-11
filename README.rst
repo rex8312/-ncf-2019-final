@@ -18,7 +18,7 @@ summary.xlsx
 -----------------------
 
 
-.. csv-table:: Table Title
+.. csv-table:: Summary
    :file: summary.csv
    :header-rows: 1
 
