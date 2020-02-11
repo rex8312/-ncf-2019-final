@@ -17,6 +17,12 @@
 summary.xlsx
 -----------------------
 
+
+.. csv-table:: Table Title
+   :file: summary.csv
+   :header-rows: 1
+
+
 - 평가 결과 요약, 평균 승률로 정렬
    - bot: 평가 시스템에서 사용한 bot이름
       - abs_taebe: abs("tae-bo")
